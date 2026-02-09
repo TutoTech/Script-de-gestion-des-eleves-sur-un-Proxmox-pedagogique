@@ -70,7 +70,7 @@ Le script configure l'accès sudo pour ces commandes Proxmox :
 ### Installation et exécution en une seule commande
 
 ```bash
-sudo -E bash -c 'f=$(mktemp) && curl -fsSL https://raw.githubusercontent.com/TutoTech/Script-de-gestion-des-eleves-sur-un-Proxmox-pedagogique/main/gestion_eleves_proxmox_v2.sh -o "$f" && chmod +x "$f" && "$f" && rm -f "$f"'
+sudo -E bash -c 'f=$(mktemp) && curl -fsSL https://raw.githubusercontent.com/TutoTech/Script-de-gestion-des-eleves-sur-un-Proxmox-pedagogique/main/gestion_eleves_proxmox.sh -o "$f" && chmod +x "$f" && "$f" && rm -f "$f"'
 ```
 
 **📌 Note importante** : Cette commande télécharge, exécute puis supprime automatiquement le script. Assurez-vous d'avoir créé votre fichier `eleves.txt` dans le répertoire courant avant de lancer la commande.
@@ -105,20 +105,20 @@ git clone https://github.com/TutoTech/Script-de-gestion-des-eleves-sur-un-Proxmo
 cd Script-de-gestion-des-eleves-sur-un-Proxmox-pedagogique
 
 # 3. Rendre le script exécutable
-chmod +x gestion_eleves_proxmox_v2.sh
+chmod +x gestion_eleves_proxmox.sh
 
 # 4. Créer votre fichier de liste d'élèves
 nano eleves.txt
 
 # 5. Exécuter le script
-sudo ./gestion_eleves_proxmox_v2.sh
+sudo ./gestion_eleves_proxmox.sh
 ```
 
 ### Alternative : Téléchargement direct
 
 ```bash
 # Télécharger uniquement le script
-curl -fsSL https://raw.githubusercontent.com/TutoTech/Script-de-gestion-des-eleves-sur-un-Proxmox-pedagogique/main/gestion_eleves_proxmox_v2.sh -o gestion_eleves_proxmox.sh
+curl -fsSL https://raw.githubusercontent.com/TutoTech/Script-de-gestion-des-eleves-sur-un-Proxmox-pedagogique/main/gestion_eleves_proxmox.sh -o gestion_eleves_proxmox.sh
 
 # Rendre exécutable
 chmod +x gestion_eleves_proxmox.sh
@@ -524,7 +524,7 @@ DURAND Claire
 EOF
 
 # Puis lancer l'installation en une ligne
-sudo -E bash -c 'f=$(mktemp) && curl -fsSL https://raw.githubusercontent.com/TutoTech/Script-de-gestion-des-eleves-sur-un-Proxmox-pedagogique/main/gestion_eleves_proxmox_v2.sh -o "$f" && chmod +x "$f" && "$f" && rm -f "$f"'
+sudo -E bash -c 'f=$(mktemp) && curl -fsSL https://raw.githubusercontent.com/TutoTech/Script-de-gestion-des-eleves-sur-un-Proxmox-pedagogique/main/gestion_eleves_proxmox.sh -o "$f" && chmod +x "$f" && "$f" && rm -f "$f"'
 
 # Le script se lance automatiquement
 # Choisir option 1 puis 3 dans le menu
