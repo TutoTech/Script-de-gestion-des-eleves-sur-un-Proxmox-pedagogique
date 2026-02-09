@@ -1,0 +1,63 @@
+# Fichier exemple de liste d'élèves pour le script de gestion Proxmox
+# 
+# INSTRUCTIONS :
+# 1. Renommer ce fichier en "eleves.txt"
+# 2. Remplacer les noms d'exemple par vos vrais élèves
+# 3. Respecter le format : NOM Prénom (un par ligne)
+# 4. Les lignes commençant par # sont des commentaires (ignorées par le script)
+# 5. Les lignes vides sont ignorées
+#
+# FORMAT ACCEPTÉ :
+# - Noms avec tirets : BERNERS-LEE Tim
+# - Noms avec accents : FRANÇOIS Jean (convertis automatiquement)
+# - Prénoms composés : Jean-Pierre DUPONT
+#
+# TRANSFORMATION AUTOMATIQUE :
+# "TORVALDS Linus" → nom d'utilisateur : linus.torvalds
+#                   → mot de passe initial : linus123
+#                   → répertoire : /home/eleves/linus.torvalds
+#
+# ============================================================================
+
+# Promotion 2026 - Groupe A
+TORVALDS Linus
+TURING Alan
+GATES Bill
+JOBS Steve
+
+# Promotion 2026 - Groupe B
+BERNERS-LEE Tim
+STALLMAN Richard
+ZUCKERBERG Mark
+PAGE Larry
+BRIN Sergey
+
+# Pionniers de l'informatique
+LOVELACE Ada
+KNUTH Donald
+MUSK Elon
+CERF Vinton
+
+# ============================================================================
+# NOTES IMPORTANTES :
+#
+# 1. Sécurité des mots de passe :
+#    - Les mots de passe initiaux (prenom123) sont temporaires
+#    - Les utilisateurs DOIVENT les changer à la première connexion
+#    - Le script force ce changement automatiquement
+#
+# 2. Noms d'utilisateur :
+#    - Format : prenom.nom (tout en minuscules)
+#    - Les accents sont supprimés automatiquement
+#    - Les tirets sont conservés
+#
+# 3. Groupe :
+#    - Tous les comptes sont ajoutés au groupe "eleves"
+#    - Les utilisateurs peuvent collaborer entre eux
+#
+# 4. Droits sudo (si configurés) :
+#    - sudo pveum (gestion utilisateurs Proxmox)
+#    - sudo qm (gestion machines virtuelles)
+#    - sudo virt-customize (customisation images VM)
+#
+# ============================================================================
