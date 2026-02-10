@@ -730,16 +730,16 @@ afficher_menu() {
   echo ""
   echo -e "${MAGENTA}╔════════════════════════════════════════════════════════════════╗${NC}"
   echo -e "${MAGENTA}║${NC}                                                                ${MAGENTA}║${NC}"
-  echo -e "${MAGENTA}║${NC}     ${BOLD}${CYAN}GESTION DES COMPTES ÉLÈVES - PROXMOX VE${NC}                   ${MAGENTA}║${NC}"
+  echo -e "${MAGENTA}║${NC}     ${BOLD}${CYAN}GESTION DES COMPTES ÉLÈVES - PROXMOX VE ${NC}                   ${MAGENTA}║${NC}"
   echo -e "${MAGENTA}║${NC}                                                                ${MAGENTA}║${NC}"
   echo -e "${MAGENTA}╚════════════════════════════════════════════════════════════════╝${NC}"
   echo ""
-  echo -e "  ${CYAN}📝${NC} ${BOLD}1)${NC} Créer les comptes élèves"
-  echo -e "  ${RED}🗑️${NC}  ${BOLD}2)${NC} Supprimer les comptes élèves"
-  echo -e "  ${GREEN}🔐${NC} ${BOLD}3)${NC} Configurer les droits sudo ${YELLOW}(pveum, qm, virt-customize)${NC}"
-  echo -e "  ${BLUE}👥${NC} ${BOLD}4)${NC} Ajouter les utilisateurs au groupe '${CYAN}eleves${NC}'"
+  echo -e "  ${CYAN}📝${NC} ${BOLD}1)${NC} Créer de nouveaux comptes utilisateurs et les ajouter au groupe '${CYAN}eleves${NC}'"
+  echo -e "  ${GREEN}🔐${NC} ${BOLD}2)${NC} Configurer les droits sudo ${YELLOW}(pveum, qm, virt-customize)${NC} pour les membres du groupe '${CYAN}eleves${NC}'"
+  echo -e "  ${MAGENTA}📋${NC} ${BOLD}3)${NC} Afficher l'état actuel"
+  echo -e "  ${BLUE}👥${NC} ${BOLD}4)${NC} Ajouter des utilisateurs existants au groupe '${CYAN}eleves${NC}'"
   echo -e "  ${YELLOW}🔒${NC} ${BOLD}5)${NC} Révoquer les droits sudo"
-  echo -e "  ${MAGENTA}📋${NC} ${BOLD}6)${NC} Afficher l'état actuel du système"
+  echo -e "  ${RED}🗑️${NC}  ${BOLD}6)${NC} Supprimer les comptes élèves"
   echo -e "  ${RED}🚪${NC} ${BOLD}7)${NC} Quitter"
   echo ""
   echo -e "${CYAN}────────────────────────────────────────────────────────────────${NC}"
@@ -773,11 +773,11 @@ main() {
         pause
         ;;
       2)
-        supprimer_comptes
+        configurer_sudo
         pause
         ;;
       3)
-        configurer_sudo
+        afficher_etat
         pause
         ;;
       4)
@@ -789,7 +789,7 @@ main() {
         pause
         ;;
       6)
-        afficher_etat
+        supprimer_comptes
         pause
         ;;
       7)
