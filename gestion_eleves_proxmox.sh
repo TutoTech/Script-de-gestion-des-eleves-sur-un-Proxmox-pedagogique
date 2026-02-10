@@ -471,7 +471,7 @@ configurer_sudo() {
 # sans avoir besoin de saisir leur mot de passe
 
 # Commandes Proxmox autorisées
-Cmnd_Alias PROXMOX_CMDS = /usr/bin/pveum, /usr/sbin/qm, /usr/bin/virt-customize
+Cmnd_Alias PROXMOX_CMDS = /usr/bin/pveum, /usr/sbin/pveum, /usr/sbin/qm, /usr/bin/virt-customize
 
 # Autorisation pour le groupe eleves
 %eleves ALL=(ALL) NOPASSWD: PROXMOX_CMDS
